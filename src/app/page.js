@@ -1,6 +1,8 @@
+'use client';
+// import ARViewer from './components/ARViewer';
 import dynamic from 'next/dynamic';
 import Head from 'next/head';
-import ARViewer from './components/ARViewer';
+const ARViewer = dynamic(() => import('./components/ARViewer'), { ssr: false });
 
 export default function Home() {
   return (
